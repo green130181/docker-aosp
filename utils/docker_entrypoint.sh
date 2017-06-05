@@ -22,13 +22,13 @@ groupadd -g $GROUP_ID -r aosp && \
 useradd -u $USER_ID --create-home -r -g aosp aosp
 echo "$msg - done"
 
-msg="docker_entrypoint: Copying .gitconfig and .ssh/config to new user home" && echo $msg
-cp /root/.gitconfig /home/aosp/.gitconfig && \
-chown aosp:aosp /home/aosp/.gitconfig && \
-mkdir -p /home/aosp/.ssh && \
-cp /root/.ssh/config /home/aosp/.ssh/config && \
-chown aosp:aosp -R /home/aosp/.ssh &&
-echo "$msg - done"
+#msg="docker_entrypoint: Copying .gitconfig and .ssh/config to new user home" && echo $msg
+#cp /root/.gitconfig /home/aosp/.gitconfig && \
+#chown aosp:aosp /home/aosp/.gitconfig && \
+#mkdir -p /home/aosp/.ssh && \
+#cp /root/.ssh/config /home/aosp/.ssh/config && \
+#chown aosp:aosp -R /home/aosp/.ssh &&
+#echo "$msg - done"
 
 msg="docker_entrypoint: Creating /tmp/ccache and /aosp directory" && echo $msg
 mkdir -p /tmp/ccache /aosp
